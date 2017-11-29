@@ -3,53 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <!-- <meta name="description" content=""> -->
     <meta name="author" content="Charles Fenwick Elliott">
     <!-- <link rel="icon" href="../../../../favicon.ico"> -->
-    <title>FenwickElliott</title>
+    <title>Fenwick Elliott</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/local.css" rel="stylesheet">
   </head>
 
   <body>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/">FenwickElliott</a>
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="http://snatched.herokuapp.com">Snatch</a>
-                <a class="dropdown-item" href="ElectroBullet.html">ElectroBullet</a>
-                <a class="dropdown-item" href="GoSnatch.html">GoSnatch</a>
-              </div>
-            </li>
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Family</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="ElectroBullet.html">ElectroBullet</a>
-                <a class="dropdown-item" href="Snatch.html">Snatch</a>
-              </div>
-            </li> -->
-          </ul>
-          <a class="nav-link p-2" href="https://github.com/FenwickElliott/" aria-label="GitHub"><img class="icon" src="Assets/Icons/github.png"></a>
-          <a class="nav-link p-2" href="mailto:Charles@FenwickElliott.io" aria-label="Mail"><img class="icon" src="Assets/Icons/mail.png"></a>
-          <a class="nav-link p-2" href="https://fenwickelliott.slack.com" aria-label="Slack"><img class="icon" src="Assets/Icons/slack.png"></a>
-        </div>
-      </nav>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">Fenwick Elliott</a>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="ElectroBullet.html">ElectroBullet</a>
+              <a class="dropdown-item" href="http://snatched.herokuapp.com">Snatch</a>
+              <a class="dropdown-item" href="GoSnatch.html">GoSnatch</a>
+            </div>
+          </li>
+        </ul>
+        <a class="nav-link p-2" href="mailto:Charles@FenwickElliott.io" aria-label="Mail"><img class="icon" src="assets/icons/mail.png"></a>
+        <a class="nav-link p-2" href="https://github.com/FenwickElliott/" aria-label="GitHub"><img class="icon" src="assets/icons/github.png"></a>
+        <a class="nav-link p-2" href="https://linkedin.com/in/FenwickElliott" aria-label="LinkedIn"><img class="icon" src="assets/icons/linkedin.png"/></a>
+      </div>
+    </nav>
 
     <div class="container">
 
       <div class="starter-template">
         <h1>ElectroBullet</h1>
         <p class="lead">PushBullet is a great service that allows one to send and recive SMS messages on thier computer.<br/>Unfortunately they didn't include a mac app so I wrote one...</p>
-        <img class="cover-image" src="Assets/Icons/ElectroBullet.png">
+        <img class="cover-image" src="assets/icons/ElectroBullet.png">
         <hr>
         <p>In order to use this program you will need to:</p>
-        <p>Download it <a href="Assets/Software/ElectroBullet.zip" download>here</a>.</p>
+        <p>Download it <a href="assets/software/ElectroBullet.zip" download>Here</a>, unzip it and move the applications folder. Then run it as you would any other application.</p>
         <p>Install the PushBullet app on your phone, either <a href="https://itunes.apple.com/us/app/pushbullet/id810352052?mt=8" target="_blank">iPhone</a> or <a href="https://play.google.com/store/apps/details?id=com.pushbullet.android&hl=en" target="_blank">Android</a>.</p>
-        <p>The first time you try to run ElectroBullet your Mac might ask you verify that you you wish to open an app from an unknown developer, to do so open the security pane of System Preferences.</p>
-        <p>Get an API key from the settings page of the PushBullet website. Simply follow this <a href="https://www.pushbullet.com/#settings/account" target="_blank">link</a>, click on 'Create Access Token' then copy and paste the resulting token into ElectroBullet, you will be asked for it the first time you run ElectroBullet.</p>
+        <p>The first time you run ElectroBullet it will open a browser to the PushBullet OAuth page for authorization. Upon authorization ElectroBullet will restart and be fully functional.</p>
       </div>
 
     </div><!-- /.container -->
