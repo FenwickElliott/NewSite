@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="description" content=""> -->
+    <meta name="author" content="Charles Fenwick Elliott">
+    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
+    <title>Fenwick Elliott - Snatch</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/local.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">Fenwick Elliott</a>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="BonBon.html">BonBon</a>
+              <a class="dropdown-item" href="ElectroBullet.html">ElectroBullet</a>
+              <a class="dropdown-item" href="GoGitCli.html">GoGitCli</a>
+              <a class="dropdown-item" href="Snatch.html">Snatch</a>
+              <a class="dropdown-item" href="Titanic.html">Titanic</a>
+            </div>
+          </li>
+          <a href="Resume.html"><li class="nav-link">Resume</li><a/>
+        </ul>
+        <a class="nav-link p-2" href="mailto:Charles@FenwickElliott.io" aria-label="Mail"><img class="icon" src="assets/icons/mail.png"></a>
+        <a class="nav-link p-2" href="https://github.com/FenwickElliott/" aria-label="GitHub"><img class="icon" src="assets/icons/github.png"></a>
+        <a class="nav-link p-2" href="https://linkedin.com/in/FenwickElliott" aria-label="LinkedIn"><img class="icon" src="assets/icons/linkedin.png"/></a>
+      </div>
+    </nav>
+
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Snatch</h1>
+        <p class="lead">Snatch was the first program I ever wrote, back when I was a child playing around with AppleScripts. Since then it has served as a personal 'Hello World'.</p> 
+        <hr>
+        <h5>Overview</h5>
+        <!-- <p>henever I start working in a new enviroment I first impliment Snatch. Doing so serves as an A/B comparison drawing attention to the strengths and weaknessess of sed enviroment. Another benefit  is that I am already familiar with all the project specific components and workflow which dramatically streamlines the process.</p> -->
+        <p>Snatch is a simple concept. It adds whichever song is currently playing on a user's Spotify to a designated playlist.</p>
+        <p>I wrote it initially because I am always listening to music in the background while perfoming other tasks (everything from coding to cooking). Making a record of a song I like can be dissruptive, it might only take 10 seconds to access Spotify find an appropriate playlist and add the song but that is long enough to lose one's train of thought and that is assuming one is working somewhere with Spotify easily accesible.</p>
+        <p>My solution to this problem was to write something that would perform this task (once set up) with a single command.</p>
+        <p>Since I first wrote Snatch I have used it consistently so whenever I encounter a new enviroment I rework it as a learning experience, an A/B comparision of enviroments and in order to imporve it or make it more accessible.</p>
+        <hr>
+        <h5>Components</h5>
+        <p>In order for Snatch to function it has to include several ubiquitous components: 
+          <li>REST calls</li>
+          <li>User authentication (OAuth2)</li>
+          <li>Data persistence</li>
+          <li>Graceful error handeling</li>
+          <li>Cross-platform distrobution and utilization</li>
+        </p> 
+        <hr>
+        <h5>Versions</h5>
+        <p><strong>AppleScript:</strong> Not a true version of Snatch but included here for context. Written in AppleScript for iTunes when I was a child but used regularly for years before I (and the market majority) moved over to Spotify.
+        <p><strong>Ruby Script:</strong> Ruby was the first OOP I learnt when I first started programming. My implimentation was clumsy but it proved a useful context for learning the ropes and served as a personal benchmark for the subsequent version.</p>
+        <p><strong>Rails:</strong> Once I had the business logic it was time to roll out a web app. I was really impressed by the convinience of the Rails framework and the ease of rolling it out with Heroku but I found the lack of flexibility frustrating and the for such a simple application there was a huge amount of bloat that I could not strip.</p>
+        <p><strong>Rack:</strong> I took everything I liked from Rails and wrote my own rack framework from the ground up including it's own ORM which provided a great insight into what was going on under the hood of rails and any other web app. I hosted it on a Raspberry Pi and served it thorough my personal IP address which had plenty of it's own shortcommings but again proved an invaluable learning experience.</p>
+        <p><strong>Golang:</strong> While I appreciate the universal ease of use that web apps offer they come with a huge amount of extranious material which really isn't required for Snatch so I returned to a client-side executable, this time in Go. Working with Go requires an understanding of exactly what goes in within all the utility functions of Ruby that one could otherwise remain oblivious to. Between that and the ideosyncratic 'Go way of doing things' provided a steep learning curve but has been my most enjoyable learning experience to date and forstered a real interest in Go, including contributing to the language it'self.</p>
+        <p><strong>Android:</strong> Once I settled on client-side executables the issue of mobile accesibility returned. So I picked up Java and Android. This project is ongoing but once complete I intend to release it on the Play Store.</p>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <script src="js/jquery-slim.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
