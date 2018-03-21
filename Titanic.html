@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="description" content=""> -->
+    <meta name="author" content="Charles Fenwick Elliott">
+    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
+    <title>Fenwick Elliott - Titanic</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/local.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">Fenwick Elliott</a>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="BonBon.html">BonBon</a>
+              <a class="dropdown-item" href="ElectroBullet.html">ElectroBullet</a>
+              <a class="dropdown-item" href="GoGitCli.html">GoGitCli</a>
+              <a class="dropdown-item" href="Snatch.html">Snatch</a>
+              <a class="dropdown-item" href="Titanic.html">Titanic</a>
+            </div>
+          </li>
+          <a href="Resume.html"><li class="nav-link">Resume</li><a/>
+        </ul>
+        <a class="nav-link p-2" href="mailto:Charles@FenwickElliott.io" aria-label="Mail"><img class="icon" src="assets/icons/mail.png"></a>
+        <a class="nav-link p-2" href="https://github.com/FenwickElliott/" aria-label="GitHub"><img class="icon" src="assets/icons/github.png"></a>
+        <a class="nav-link p-2" href="https://linkedin.com/in/FenwickElliott" aria-label="LinkedIn"><img class="icon" src="assets/icons/linkedin.png"/></a>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="starter-template">
+        <h1>Titanic Kaggle Competition</h1>
+        <p class="lead"><a href="https://www.kaggle.com">Kaggle</a> is a great service that hosts data science competitions. The <a href="https://www.kaggle.com/c/titanic">Titanic</a> challenge involves predicting which passengers survived based on redacted data. My final public score was 81.339% accurate (the 6th percentile globally).</p>
+        <img class="img-fluid" src="/assets/images/Titanic.jpg">
+        <hr>
+        <h5>Overview</h5>
+        <p>I shall consider the tragic history of the Titanic to be assumed knowledge. The this context the relevant information is that there were 2224 people on board when it sank. Of those people we have fairly complete data about who each of them were and significantly which survived.</p>
+        <p>For the challenge body of passengers is broken into 3 groups. The challenger is given all the data of the first group (<a href="https://www.kaggle.com/c/3136/download/train.csv">the training set</a>) and all the data of the second group (<a href="https://www.kaggle.com/c/3136/download/test.csv">the test set</a>) excpect whether or not each passenger survived.</p>
+        <p>The challenge is to predict whether each passenger in the second (test) set survived based on the other data we have about them.</p>
+        <p>The data given for each passenger was: 
+          <li>Survival: Whethere they survived or not, (training set only)</li>
+          <li>Name</li>
+          <li>Ticket class: First, Second or Third</li>
+          <li>Sex</li>
+          <li>Age</li>
+          <li>Number of spouses or siblings they traveled with</li>
+          <li>Number of children of parents they traveled with</li>
+          <li>Their ticket number</li>
+          <li>The price of their ticket</li>
+          <li>Cabin number</li>
+          <li>Which port they embarked from: Cherbourg, Queenstown, Southampton</li>
+        </p>
+        <h5>Abridged Method</h5>
+        <p><strong>Breif:</strong> While it would be possible to make predictions based on any process this challenge is geared towards machine learning not psycic intuition so lets go with that. Machine learning is a prominent field of data science which involves constructing a model, training it on one data set (training set) and using it to predict properties of another (test set). Becasue I had never worked with the R programming language which is designed for data science projects such as this I decided to learn and use it here.</p>
+        <p><strong>Feature Engineering:</strong> An optional but often critial step. The model will not know that class 1 is more privelidged than class 3 but one can safely presume that if it's relevant the model will see that through simple coralation. Conversely there is relevant information in the name that a model would be oblivious to without some feature engineering.</p>
+        <p><strong>(i)</strong> As an example a model would see no connection between two passengers named: "Smith, Mr. John" and "Smith, Mrs. Jane" since the entire alpha-numerical sequence didn't match. To that end it makes sence to break up the name field into 'name[0]' (surname) and name[1] (title). It would be interesting to investigate if given names had any observable impact but on a sample this size it seems unlikely.</p>
+        <p><strong>(ii)</strong> Another example of sensible feature engineering would be to analize the titles. The model wouldn't know that 'Mlle' is the french analogue to the english 'Miss' so we should conflate the two. Similarly there is one 'capt' and two 'Major's not enough to show a corelation in this data set so we should conflate those with any other senior military title we find.</p>
+        <p><strong>(iii)</strong> Lastly and most intricately it is possible to reconstruct families, (those how many spouses / siblings and children / parents variables suddenly make sence). If someone is traveling alone they can be considered as a single. Conversely there are 8 passengers with the name 'Goodwin' each of whom is traveling with 7 family members so it's a safe bet each of them were members of the same family.</p>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <script src="js/jquery-slim.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
