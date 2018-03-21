@@ -39,21 +39,21 @@
 
       <div class="starter-template">
         <h1>GoGitCli (newrepo)</h1>
-        <p class="lead">A CLI tool incorperated into Google's official Github repo: <a href="https://github.com/google/go-github">go-github</a>.</p>
+        <p class="lead">A CLI tool incorporated into Google's official Github repo: <a href="https://github.com/google/go-github">go-github</a>.</p>
         <hr>
-        <p>go-github is a great project but their documentations of use cases was fairly sparce and several users had left issues requesting further examples. To that end I turned it into a CLI which generates a new repo on the user's github: <a href="https://github.com/google/go-github/blob/master/example/newrepo/main.go">GoGitCli</a>.</p>
+        <p>go-github is a great project but their documentations of use cases was fairly sparse and several users had left issues requesting further examples. To that end I turned it into a CLI which generates a new repo on the user's github: <a href="https://github.com/google/go-github/blob/master/example/newrepo/main.go">GoGitCli</a>.</p>
         <hr>
         <h5>Brief</h5>
         <p>As an use case example GoGitCli had to be simple, useful and 'Go-like'.</p>
         <p>The first two points were satisfied by the concept: A command which took variables (at minimum a name for the repo to be created) and produced a result: A new repo on the user's Github.</p>
-        <p>As to being 'Go-like' I was fortunate to recive guidance form one of the repo's most prolific contributors: <a href="https://github.com/gmlewis">gmlewis</a>. He kindly suggested conforming to Go's styleistic principles in terms of structuring comments for Godocs automated parsing and utilizing flags instead of command line arguments.</p>
+        <p>As to being 'Go-like' I was fortunate to receive guidance form one of the repo's most prolific contributors: <a href="https://github.com/gmlewis">gmlewis</a>. He kindly suggested conforming to Go's stylistic principles in terms of structuring comments for Godocs automated parsing and utilizing flags instead of command line arguments.</p>
         <hr>
         <h5>Instillation</h5>
-        <p>While this was designed to be incorperated into the go-github repo is also exists as a stand-alone project and can be installed as such:</p>
+        <p>While this was designed to be incorporated into the go-github repo is also exists as a stand-alone project and can be installed as such:</p>
         <p><code>go get github.com/fenwickelliott/newrepo</code></p>
         <hr>
-        <h5>Useage</h5>
-        <p>In order to narrow the scope of this example to utilization of the go-github package authorization is not included. Instead it is asumed that the user has a valid Github auth token saved as an enviroment variable.<!-- A Golang solution for getting auth tokens through OAuth2 see <a href="#">x-plat</a>. --></p>
+        <h5>Usage</h5>
+        <p>In order to narrow the scope of this example to utilization of the go-github package authorization is not included. Instead it is assumed that the user has a valid Github auth token saved as an environment variable.<!-- A Golang solution for getting auth tokens through OAuth2 see <a href="#">x-plat</a>. --></p>
         <p>newrepo must be called with at minimum a name flag:</p>
         <p><code>newrepo -name=example</code></p>
         <p>Other optional flags include 'description' and 'private':</p>
